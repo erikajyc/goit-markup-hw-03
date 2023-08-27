@@ -4,9 +4,6 @@
     box-sizing: border-box; 
 }
 
-.studio {
-    height: 2208px;
-}
 :root {
     --iris: #4D5AE5;
     --ocean: #404BBF;
@@ -27,46 +24,56 @@ body {
     max-width: 1440px;
 }
 
-.header-nav,
-.nav-list,
-.address-list {
-    display: flex;
+a {
+    list-style: none;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
 }
 
 .container-header {
-    display: inline-flex;
+    display: flex;
     height: 72px;
     flex-shrink: 0;
+    justify-content: space-between;
     border-bottom: 1px solid var(--cornflower);
-}
-
-.list-mail {
-    margin: 24px 0px 24px 332px;
 
 }
 
-.list-tel {
-    margin: 24px 156px 24px 0px;
+.header-nav {
+    display: flex;
+    gap: 76px;
+    align-items: center;
 }
 
+.nav-list {
+    display: flex;
+    gap: 40px;
+}
 .address-list {
+    display: flex;
     column-gap: 40px;
+    height: 100%; 
+    align-items: center;
 }
 
 .features-list {
     display: flex;
-    justify-content: center;
-    width: 1440px;
+    justify-content: space-between;
 }
 
-.team-title {
-    padding: 120px 0px 72px 0px;
-}
+.features-list-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}   
 
 .section-container {
     display: flex;
     column-gap: 40px;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .team-card {
@@ -80,31 +87,38 @@ h2 {
     font-size: 36px;
     line-height: 40px;
     letter-spacing: 0.72px;
+    margin-bottom: 72px;
 }
 
-.section-hero {
+.hero {
     color: var(--white);
     background-color: var(--navyblue);
     text-align: center;
-    width: 1440px;
-    height: 600px;
     flex-shrink: 0;
+    padding: 188px 0px;
 }
 
-
+.hero-container {
+    display:flex;
+    gap: 48px;
+    flex-direction:column;
+}
 .hero-slogan {
     color: var(--white);
     text-align: center; 
     font-size: 56px;
     line-height: 60px; 
     letter-spacing: 1.12px;
-    padding: 188px 472px 40px 472px;
+    margin-bottom: 48px;
 }
 
-.section-footer {
+.section {
+    padding: 120px 0px;
+}
+
+.footer {
     color: var(--white);
     background-color: var(--navyblue);
-    width: 1440px;
     height: 312px;
     flex-shrink: 0;
 }
@@ -114,7 +128,7 @@ h2 {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
-    padding: 17.5px 1020px 100px 156px;
+    padding-top:17.5px;
 }
 
 .header-nav-logo {
@@ -126,10 +140,6 @@ h2 {
     line-height: 21px;
     letter-spacing: 0.54px;
     text-transform: uppercase;  
-    padding-top: 25.5px;
-    padding-right: 76px;
-    padding-bottom: 25.5;
-    padding-left: 156px;
 }
 
 .span-logo {
@@ -147,18 +157,6 @@ h2 {
 .span-logo-footer {
     color: var(--cloud);
 }
-
-.nav-list,
-.address-list,
-.button-list-item {
-   list-style-type: none;
-}
-
-.nav-list-item {
-    margin: 24px 0px 24px 0px;
-    padding-right: 24px;
-}
-
 
 .header-nav-links {
     color: var(--navyblue);
@@ -206,9 +204,7 @@ h2 {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
-    width: 264px;
     letter-spacing: 0.4px;
-    padding: 120px 24px 8px 0px;
 } 
 
 .features-caption {
@@ -216,14 +212,11 @@ h2 {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: 0.32px;
-    padding-right: 24px;
-    padding-bottom: 120px;
 }
 
-.section-team {
+.team {
+    display: flex;
     background-color: var(--cloud);
-    width: 1440px;
-    height: 732px;
     flex-shrink: 0; 
 }
 
@@ -289,29 +282,29 @@ h2 {
     list-style-type: none;
 }
 
-.section-features {
-    width: 1117px;
-}
-
 .services-container {
     display: flex;
     column-gap: 24px;
-    padding: 72px 156px 120px 156px;
+    justify-content:space-between;
 }
 
-.container-button {
-    display: inline-flex;
-    column-gap: 24px;
-    padding: 96px 427px 72px 427px;
-}
-
-.container-apps {
+.button-list {
     display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 96px;
+    padding-bottom: 72px;
+}
+
+.apps-container {
+    padding-bottom: 120px;
+}
+
+.apps-list {
+    display: flex;
+    flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
-    flex-wrap: wrap;
-    margin-left: 156px;
-    margin-bottom: 152px;
 }
 
 .container-apps-list {
@@ -337,11 +330,12 @@ h2 {
 .card-content {
     padding: 32px 16px;
 }
-.container-footer {
-        padding: 101.5px 0px 17.5px 0px;
-        row-gap: 17.5;
+
+.footer {
+    padding: 101.5px 0px;
 }
 
 .card-content {
     padding: 32px 16px;
 }
+
