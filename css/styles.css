@@ -21,7 +21,6 @@
 
 body {
     font-family: 'Roboto' , 'sans-serif';
-    max-width: 1440px;
 }
 
 a {
@@ -35,13 +34,18 @@ a {
 
 .container-header {
     display: flex;
-    height: 72px;
     flex-shrink: 0;
     justify-content: space-between;
-    border-bottom: 1px solid var(--cornflower);
-
+    padding: 24px 15px;
 }
 
+.header {
+     border-bottom: 1px solid var(--cornflower);
+}
+
+.services {
+    padding-top: 0px;
+}
 .header-nav {
     display: flex;
     gap: 76px;
@@ -72,11 +76,27 @@ a {
 
 .section-container {
     display: flex;
-    column-gap: 40px;
     justify-content: space-between;
 }
 
+img {
+    display:block;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.team-card-image {
+    border-radius: 4px;
+}
+
+.team-list-item {
+    border-radius: 0px 0px 4px 4px;
+    background: var(--white, #FFF);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+
 .team-card {
+    border-radius: 0px opx 4px 4px;
     padding: 32px 0px;
     background-color: var(--white);
 }
@@ -186,8 +206,8 @@ h2 {
     color: var(--ocean);
 }
 
-.button-list-filters:focus,
-.button-list-filters:hover {
+.filters-button:focus,
+.filters-button:hover {
     color: var(--white);
     background-color: var(--iris);
     border-color: var(--ocean);
@@ -241,7 +261,7 @@ h2 {
     letter-spacing: 0.32px;
 }
 
-.button-list-filters {
+.filters-button {
     color: var(--iris);
     font-family: Roboto , 'sans serif';
     font-size: 16px;
@@ -253,7 +273,6 @@ h2 {
     background: var(--cloud);
     cursor:pointer;
     padding: 12px 24px;
-    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
 }
 
 .hero-button {
@@ -288,7 +307,7 @@ h2 {
     justify-content:space-between;
 }
 
-.button-list {
+.filters-button-list {
     display: flex;
     justify-content: center;
     gap: 40px;
